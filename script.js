@@ -1,12 +1,10 @@
 window.addEventListener('scroll', function () {
-  var navbar = document.getElementById('navbar')
-  var mainContent = document.querySelector('main')
+  var navbar = document.querySelector('nav')
+  var threshold = 400
 
-  var whitePartOffset = mainContent.offsetTop
-
-  if (window.scrollY >= whitePartOffset) {
-    navbar.classList.add('white-background')
+  if (window.scrollY > threshold) {
+    navbar.style.backgroundColor = 'white'
   } else {
-    navbar.classList.remove('white-background')
+    navbar.style.backgroundColor = '#ffc017'
   }
 })
